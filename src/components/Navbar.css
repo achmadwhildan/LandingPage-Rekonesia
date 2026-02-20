@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -44,17 +43,19 @@ body {
 .container {
     width: 100%;
     max-width: 1200px;
+    height: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
+    height: 100%; 
 }
 
 .logo {
     display: flex;
-    gap : 0.5rem;
-    align-items: center;
+    align-items: center; 
+    gap: 0.5rem;
 }
 
 .logo img {
@@ -74,19 +75,22 @@ body {
 h1 {
     color: white;
     font-size: 1.5rem;
+    transition: fonsize 0.3s ease;
 }
 
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.2rem;
+    align-items: center; 
+    gap: 1.5rem;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 

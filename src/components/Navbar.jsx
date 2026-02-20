@@ -23,7 +23,7 @@ const Navbar = () => {
         <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
             <div className="container">
                 <div className="logo">
-                    <img src="/images/rekonesia-logo-only.png" alt="Rekonesia Logo" />
+                    <img src="/img/rekonesia-logo-only.png" alt="Rekonesia Logo" />
                     <h1>REKONESIA</h1>
                 </div>
                 <ul className="nav-links">
