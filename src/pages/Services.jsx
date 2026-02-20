@@ -45,29 +45,37 @@ export default function Services() {
   return (
     <section className="services">
       <div className="container">
-        <div className="services-header">
-          <h2 className="services-title">
-            Our <span>Services</span>
-          </h2>
-          <p className="services-subtitle">
-            Solusi komprehensif yang dirancang untuk mendorong pertumbuhan
-            bisnis Anda di era digital.
-          </p>
-        </div>
+        <h2 className="services-title">Our Services</h2>
+        <div className="underline"></div>
 
         <div className="services-grid">
           {services.map((item, index) => (
             <div className="service-card" key={index}>
-              <div className="card-number">{item.number}</div>
-              <div className="icon-wrap">
-                <span className="icon">{item.icon}</span>
+              <div className="icon-wrapper">
+                <div className="icon">{item.icon}</div>
               </div>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+              <div className="card-content">
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      <section className="description-section">
+        <div className="description">
+          <h2 className="title-description">
+            Izinkan Kami Membantumu Tumbuh & Berkembang
+          </h2>
+          <p className="subtitle">
+            Kami mengoptimalkan pengalaman, kompetensi yang luas di
+            multi-industri serta kolaborasi yang kuat dengan para prinsipal TI
+            terkemuka dunia dan mitra bisnis untuk menjadi penyedia utama solusi
+            TI yang komprehensif di Indonesia
+          </p>
+        </div>
+      </section>
     </section>
   );
 }
