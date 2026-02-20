@@ -44,10 +44,9 @@ export default function Services() {
 
   return (
     <section className="services">
+      <h2 className="services-title">Our Services</h2>
+      <div className="underline"></div>
       <div className="container">
-        <h2 className="services-title">Our Services</h2>
-        <div className="underline"></div>
-
         <div className="services-grid">
           {services.map((item, index) => (
             <div className="service-card" key={index}>
