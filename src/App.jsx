@@ -1,4 +1,4 @@
-import Services from "./pages/services";
+import Services from "./pages/services/Services";
 
 function App() {
   return (
