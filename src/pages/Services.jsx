@@ -13,22 +13,22 @@ export default function Services() {
     {
       icon: <FaBriefcase />,
       title: "Smart City Solutions",
-      desc: "Solusi kota pintar menyediakan teknologi pintar yang komprehensif untuk meningkatkan standar hidup di kota dan menciptakan peradaban yang lebih baik.",
+      desc: "Smart city solutions provide comprehensive intelligent technologies to improve urban living standards and create a better civilization.",
     },
     {
       icon: <FaProjectDiagram />,
       title: "Infrastructure Solutions",
-      desc: "Infrastruktur TI yang kuat dan andal dapat mendorong bisnis untuk mencapai tujuan mereka dan beradaptasi dengan perubahan pasar.",
+      desc: "A strong and reliable IT infrastructure enables businesses to achieve their goals and adapt to market changes.",
     },
     {
       icon: <FaChartBar />,
       title: "Smart Office Solutions",
-      desc: "Solusi untuk ruang kerja cerdas yang memungkinkan pekerja berkolaborasi untuk meningkatkan produktivitas.",
+      desc: "Solutions for smart workspaces that enable employees to collaborate and enhance productivity.",
     },
     {
       icon: <FaBuilding />,
-      title: "IT Strategic",
-      desc: "Master Plan, Road Map",
+      title: "IT Strategy",
+      desc: "Master Plan, Roadmap",
     },
     {
       icon: <FaSun />,
@@ -37,8 +37,8 @@ export default function Services() {
     },
     {
       icon: <FaCalendarAlt />,
-      title: "IT Analytical",
-      desc: "Data Scientist",
+      title: "IT Analytics",
+      desc: "Data Science",
     },
   ];
 
@@ -65,14 +65,12 @@ export default function Services() {
 
       <section className="description-section">
         <div className="description">
-          <h2 className="title-description">
-            Izinkan Kami Membantumu Tumbuh & Berkembang
-          </h2>
+          <h2 className="title-description">Let Us Help You Grow & Thrive</h2>
           <p className="subtitle">
-            Kami mengoptimalkan pengalaman, kompetensi yang luas di
-            multi-industri serta kolaborasi yang kuat dengan para prinsipal TI
-            terkemuka dunia dan mitra bisnis untuk menjadi penyedia utama solusi
-            TI yang komprehensif di Indonesia
+            We leverage our extensive experience and multi-industry expertise,
+            along with strong collaboration with leading global IT principals
+            and business partners, to become a leading provider of comprehensive
+            IT solutions in Indonesia.
           </p>
         </div>
       </section>
