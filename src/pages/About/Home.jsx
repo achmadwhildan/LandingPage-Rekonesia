@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import { FaPhoneAlt, FaCogs, FaSmile, FaHandshake, FaAward } from "react-icons/fa";
 
 const Home = () => {
+    const navigate = useNavigate();
 
     return (
         <>
@@ -17,10 +19,10 @@ const Home = () => {
                     </p>
 
                     <div className="btn">
-                        <button className="btn-contact">
+                        <button className="btn-contact" onClick={() => navigate("/contact")}>
                             <FaPhoneAlt /> Contact
                         </button>
-                        <button className="btn-service">
+                        <button className="btn-service" onClick={() => navigate("/service")}>
                             <FaCogs /> Service
                         </button>
                     </div>

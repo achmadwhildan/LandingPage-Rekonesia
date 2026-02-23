@@ -1,10 +1,12 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 import Home from "./pages/About/Home";
 import VisiMisi from "./pages/About/VisiMisi";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contacts/Contact";
-import Footer from "./components/Footer";
+import Customer from "./pages/About/Customer"; 
 
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
@@ -13,18 +15,6 @@ import { useState, useEffect } from "react";
 /* ─── Loading Screen ─── */
 function LoadingScreen() {
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
-        <Home />
-        <Customer />
-        <VisiMisi />
-        <Services />
-        <Contact />
-        <Footer />
-      </BrowserRouter>
-    </>
-  )
     <motion.div
       className="loading-screen"
       initial={{ opacity: 0 }}
@@ -33,7 +23,6 @@ function LoadingScreen() {
       transition={{ duration: 0.2 }}
     >
       <div className="loading-content">
-        {/* Logo */}
         <motion.div
           className="loading-logo"
           initial={{ opacity: 0, y: 10 }}
@@ -43,7 +32,6 @@ function LoadingScreen() {
           REKONESIA
         </motion.div>
 
-        {/* Spinner */}
         <div className="loading-spinner-wrap">
           <div className="loading-spinner"></div>
         </div>
@@ -56,20 +44,18 @@ function LoadingScreen() {
 function AnimatedRoutes() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
-  const [displayLocation, setDisplayLocation] = useState(location);
+  const [routeKey, setRouteKey] = useState(location.pathname);
 
   useEffect(() => {
-    if (location.pathname !== displayLocation.pathname) {
-      setIsLoading(true);
+    setIsLoading(true);
 
-      const timer = setTimeout(() => {
-        setDisplayLocation(location);
-        setIsLoading(false);
-      }, 500);
+    const timer = setTimeout(() => {
+      setRouteKey(location.pathname);
+      setIsLoading(false);
+    }, 500);
 
-      return () => clearTimeout(timer);
-    }
-  }, [location, displayLocation]);
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   return (
     <AnimatePresence mode="wait">
@@ -77,27 +63,27 @@ function AnimatedRoutes() {
         <LoadingScreen key="loading" />
       ) : (
         <motion.div
-          key={displayLocation.pathname}
+          key={routeKey}
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -24 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
         >
-          <Routes location={displayLocation}>
+          <Routes>
             <Route
               path="/"
               element={
                 <>
                   <Home />
-                  <VisiMisi />
-                  <Services />
+                  <Customer />
                 </>
               }
             />
+            <Route path="/about" element={<VisiMisi />} />
+            <Route path="/service" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
 
-          {/* Footer pindah ke sini */}
           <Footer />
         </motion.div>
       )}
