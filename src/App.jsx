@@ -6,99 +6,89 @@ import Home from "./pages/About/Home";
 import VisiMisi from "./pages/About/VisiMisi";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contacts/Contact";
-import Customer from "./pages/About/Customer"; 
-
+import Customer from "./pages/About/Customer";
+import PageLoader from "./components/pageLoader";
+import PageTransition from "./components/PageTransition";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState, useEffect } from "react";
-
-/* ─── Loading Screen ─── */
-function LoadingScreen() {
-  return (
-    <motion.div
-      className="loading-screen"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
-    >
-      <div className="loading-content">
-        <motion.div
-          className="loading-logo"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.25 }}
-        >
-          REKONESIA
-        </motion.div>
-
-        <div className="loading-spinner-wrap">
-          <div className="loading-spinner"></div>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-/* ─── Animated Routes ─── */
-function AnimatedRoutes() {
+import { AnimatePresence } from "framer-motion";
+import { useEffect, useState, useRef, startTransition } from "react";
+function AppWrapper() {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(false);
-  const [routeKey, setRouteKey] = useState(location.pathname);
+  const [loading, setLoading] = useState(false);
+  const firstRender = useRef(true);
 
   useEffect(() => {
-    setIsLoading(true);
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
 
     const timer = setTimeout(() => {
-      setRouteKey(location.pathname);
-      setIsLoading(false);
-    }, 500);
+      startTransition(() => {
+        setLoading(false);
+      });
+    }, 1200);
+
+    startTransition(() => {
+      setLoading(true);
+    });
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
-    <AnimatePresence mode="wait">
-      {isLoading ? (
-        <LoadingScreen key="loading" />
-      ) : (
-        <motion.div
-          key={routeKey}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -24 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
-        >
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Home />
-                  <Customer />
-                </>
-              }
-            />
-            <Route path="/about" element={<VisiMisi />} />
-            <Route path="/service" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+    <>
+      {loading && <PageLoader />}
 
-          <Footer />
-        </motion.div>
-      )}
-    </AnimatePresence>
+      <Navbar />
+
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <PageTransition>
+                <Home />
+                <Customer />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <PageTransition>
+                <VisiMisi />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/service"
+            element={
+              <PageTransition>
+                <Services />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <PageTransition>
+                <Contact />
+              </PageTransition>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
+
+      <Footer />
+    </>
   );
 }
 
-/* ─── App ─── */
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <AnimatedRoutes />
+      <AppWrapper />
     </BrowserRouter>
   );
 }
-
-export default App;
