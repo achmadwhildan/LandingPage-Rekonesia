@@ -28,7 +28,7 @@ export default function Contact() {
         "tryon080208",
         "template_hx3ju8v",
         formRef.current,
-        "PKLhtiLsRuKbZdmmt"
+        "PKLhtiLsRuKbZdmmt",
       )
       .then(
         () => {
@@ -40,7 +40,7 @@ export default function Contact() {
           setStatus("error");
           console.log(error);
           setTimeout(() => setStatus("idle"), 4000);
-        }
+        },
       );
   };
 
@@ -51,7 +51,6 @@ export default function Contact() {
         <div className="title-line"></div>
 
         <div className="contact-grid">
-          {/* LEFT SIDE - INFO */}
           <div className="contact-info glass-card">
             <h3>PT REKONESIA</h3>
             <p className="tagline">For a more advanced Indonesia</p>
@@ -85,7 +84,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* RIGHT SIDE - FORM */}
           <div className="contact-form glass-card">
             <h3>Kirim Pesan</h3>
 
@@ -94,7 +92,7 @@ export default function Contact() {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Nama Lengkap"
+                  placeholder="Full Name"
                   value={form.name}
                   onChange={handleChange}
                   required
@@ -127,7 +125,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   rows="5"
-                  placeholder="Tulis pesan Anda..."
+                  placeholder="Message..."
                   value={form.message}
                   onChange={handleChange}
                   required
@@ -138,13 +136,13 @@ export default function Contact() {
               {status === "success" && (
                 <div className="status-message status-success">
                   <span className="status-icon">✓</span>
-                  Email sudah terkirim!
+                  Email has been sent successfully!
                 </div>
               )}
               {status === "error" && (
                 <div className="status-message status-error">
                   <span className="status-icon">✕</span>
-                  Gagal mengirim pesan. Coba lagi.
+                  Failed to send email. Please try again later.
                 </div>
               )}
 
