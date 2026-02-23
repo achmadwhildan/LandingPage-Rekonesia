@@ -74,7 +74,7 @@
 
 .partner-card {
     position: relative;
-    overflow: hidden; /* penting agar overlay tidak keluar card */
+    overflow: hidden; 
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 30px 20px;
@@ -94,12 +94,10 @@
     transition: all 0.35s ease;
 }
 
-/* Overlay nama */
-/* Overlay nama - frosted glass effect */
 .partner-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.08); /* transparan */
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     display: flex;
@@ -119,7 +117,7 @@
     letter-spacing: 0.5px;
     text-align: center;
     padding: 0 12px;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6); /* biar teks tetap terbaca */
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* Saat hover */
