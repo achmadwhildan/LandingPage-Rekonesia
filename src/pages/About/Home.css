@@ -76,9 +76,8 @@
     transform: translateY(-2px);
 }
 
-/* ================= VALUES ================= */
 .values {
-    background: #0b0b0b;
+    background: #1a1919;
     color: white;
     padding: 5rem 2rem;
     text-align: center;
@@ -135,7 +134,6 @@
     color: #cfd8ff;
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
     .values-grid {
         grid-template-columns: 1fr;

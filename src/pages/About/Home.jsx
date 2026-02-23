@@ -3,6 +3,7 @@ import "./Home.css";
 import { FaPhoneAlt, FaCogs, FaSmile, FaHandshake, FaAward } from "react-icons/fa";
 
 const Home = () => {
+
     return (
         <>
             <section className="home">
