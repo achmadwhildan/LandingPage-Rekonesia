@@ -50,7 +50,100 @@
     opacity: 1;
     transform: scale(1.05);
 }
+.partners {
+    background: #1a1919;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'sora', 'helvetica neue', sans-serif;
+}
 
+.partners-title {
+    color: #9ca3af;
+    font-size: 18px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.partner-card {
+    position: relative;
+    overflow: hidden; /* penting agar overlay tidak keluar card */
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 30px 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s ease;
+}
+
+.partner-card img {
+    max-width: 120px;
+    max-height: 70px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.8);
+    opacity: 0.6;
+    transition: all 0.35s ease;
+}
+
+/* Overlay nama */
+/* Overlay nama - frosted glass effect */
+.partner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.08); /* transparan */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.35s ease;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.partner-name {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 0 12px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6); /* biar teks tetap terbaca */
+}
+
+/* Saat hover */
+.partner-card:hover .partner-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.partner-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(45, 125, 246, 0.25);
+    border-color: rgba(45, 125, 246, 0.5);
+}
+
+.partner-card:hover img {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .partners-grid {
+        gap: 24px;
+    }
+}
 @media (max-width: 480px) {
     .partners-grid {
         gap: 24px;
