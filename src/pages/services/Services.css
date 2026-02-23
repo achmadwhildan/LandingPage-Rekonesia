@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap");
 
 .services {
   background: #1a1919;
   padding: 80px 0;
-  font-family: 'Sora', 'helvetica neue', sans-serif;
+  font-family: "Sora", "helvetica neue", sans-serif;
 }
 
 .container {
@@ -60,10 +60,14 @@
 }
 
 .service-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(45, 125, 246, 0.06) 0%, transparent 60%);
+  background: linear-gradient(
+    135deg,
+    rgba(45, 125, 246, 0.06) 0%,
+    transparent 60%
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -85,7 +89,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .service-card:hover .icon-wrapper {
@@ -96,11 +102,13 @@
 .icon {
   font-size: 22px;
   color: #7abfe4;
-  transition: transform 0.4s ease, color 0.3s ease;
+  transition:
+    transform 0.4s ease,
+    color 0.3s ease;
 }
 
 .service-card:hover .icon {
-  transform: rotate(17deg) scale(1.2);
+  transform: scale(1.15);
   color: #4b96e0;
 }
 
@@ -136,7 +144,7 @@
 }
 
 .description-section {
-  background-image: url('img/img-001.jpg');
+  background-image: url("img/img-001.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -146,7 +154,7 @@
 }
 
 .description-section::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: rgba(26, 25, 25, 0.7);
