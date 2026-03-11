@@ -9,6 +9,7 @@ import Contact from "./pages/contacts/Contact";
 import Customer from "./pages/About/Customer";
 import PageLoader from "./components/pageLoader";
 import PageTransition from "./components/PageTransition";
+import Experience from "./pages/About/Experience";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState, useRef, startTransition } from "react";
@@ -58,6 +59,7 @@ function AppWrapper() {
             element={
               <PageTransition>
                 <VisiMisi />
+                <Experience />
               </PageTransition>
             }
           />

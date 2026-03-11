@@ -53,11 +53,11 @@ function Footer() {
                 {/* Contact */}
                 <div className="footer-col">
                     <h3>Contact Us</h3>
-                    <p> Metropolitan Tower Lantai 13-A
+                    <p>Metropolitan Tower Lantai 13-A
                         Jl. RA Kartini - TB Simatupang Kav. 14
                         Cilandak, Jakarta Selatan
                         DKI Jakarta 12430</p>
-                    <p><FaPhoneAlt /> +6221-21277626</p>
+                    <p><FaPhoneAlt /> +622-121-693-752</p>
                     <p><FaEnvelope /> sapa[at]rekonesia.co.id</p>
                 </div>
             </div>

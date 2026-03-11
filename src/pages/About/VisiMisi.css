@@ -5,8 +5,8 @@
 }
 
 .vm-root {
-    background-color: #1a1919;
-    color: #f0ece4;
+    background-color: #e5e7eb;
+    color:#0b1630;
     min-height: 100vh;
     padding: 4rem 2rem;
     position: relative;
@@ -66,7 +66,7 @@
     font-family: 'Sora', 'helvetica neue', sans-serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 900;
-    color: #f0ece4;
+    color:  #0b1630;
     line-height: 1.1;
 }
 
@@ -135,7 +135,7 @@
     font-weight: 400;
     font-style: italic;
     line-height: 1.8;
-    color: #e8e0d0;
+    color:#0b1630;
     position: relative;
     z-index: 1;
 }
@@ -209,7 +209,7 @@
 .vm-misi-text {
     font-size: 0.93rem;
     font-weight: 300;
-    color: #b0a898;
+    color:  #0b1630;
     line-height: 1.8;
     position: relative;
     z-index: 1;
@@ -217,12 +217,12 @@
 }
 
 .vm-misi-item:hover .vm-misi-text {
-    color: #d8d0c0;
+    color:  #0b1630;
 }
 
 .vm-misi-title {
     font-weight: 500;
-    color: #e0d8c8;
+    color:#0b1630;
     display: block;
     margin-bottom: 0.3rem;
     font-size: 0.97rem;

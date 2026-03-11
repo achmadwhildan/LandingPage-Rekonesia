@@ -1,5 +1,5 @@
 .partners {
-    background:#1a1919;
+    background: #e5e7eb;
     padding: 80px 20px;
     text-align: center;
 }
@@ -51,7 +51,7 @@
     transform: scale(1.05);
 }
 .partners {
-    background: #1a1919;
+    background: #e5e7eb;
     padding: 80px 20px;
     text-align: center;
     font-family: 'sora', 'helvetica neue', sans-serif;
@@ -110,7 +110,7 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.partner-name {
+/* .partner-name {
     color: #fff;
     font-size: 13px;
     font-weight: 600;
@@ -118,13 +118,13 @@
     text-align: center;
     padding: 0 12px;
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
-}
+} */
 
 /* Saat hover */
-.partner-card:hover .partner-overlay {
+/* .partner-card:hover .partner-overlay {
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
 .partner-card:hover {
     transform: translateY(-6px);

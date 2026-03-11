@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap');
 
 .contact-section {
-  background-color: #1a1919;
+  background-color: #e5e7eb;
   min-height: 100vh;
   padding: 100px 0 120px;
   font-family: 'Sora', 'helvetica neue', sans-serif;
@@ -19,7 +19,7 @@
   transform: translateX(-50%);
   width: 900px;
   height: 500px;
-  background: radial-gradient(ellipse at center, rgba(30, 90, 180, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(224, 230, 239, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -35,7 +35,7 @@
   font-family: 'Sora', sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: #f0f6fc;
+  color: #0b1630;
   margin: 0 0 16px;
   letter-spacing: -0.02em;
 }
@@ -43,7 +43,7 @@
 .title-line {
   width: 52px;
   height: 3px;
-  background: #2563eb;
+  background: #0b1630;
   border-radius: 2px;
   margin: 0 auto 64px;
 }

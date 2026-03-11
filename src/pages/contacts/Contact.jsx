@@ -56,26 +56,18 @@ export default function Contact() {
             <p className="tagline">For a more advanced Indonesia</p>
 
             <div className="info-block">
-              <h4>Head Office</h4>
+              <h4>Office</h4>
               <p>
-                Metropolitan Tower Lantai 13-A <br />
-                Jl. RA Kartini - TB Simatupang Kav 14 <br />
-                Cilandak, Jakarta Selatan, DKI Jakarta 12430
-              </p>
-            </div>
-
-            <div className="info-block">
-              <h4>Workshop</h4>
-              <p>
-                Ruko HMS <br />
-                Jl. Raya Gandul No.12A-2 <br />
-                Cinere, Kota Depok, Jawa Barat 16512
+                Metropolitan Tower Lantai 13-A
+                Jl. RA Kartini - TB Simatupang Kav. 14
+                Cilandak, Jakarta Selatan
+                DKI Jakarta 12430
               </p>
             </div>
 
             <div className="info-block">
               <h4>Email</h4>
-              <p>info@rekonesia.co.id</p>
+              <p>info[at]rekonesia.co.id</p>
             </div>
 
             <div className="info-block">

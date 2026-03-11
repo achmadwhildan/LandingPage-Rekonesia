@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap");
 
 .services {
-  background: #1a1919;
+  background: #e5e7eb;
   padding: 80px 0;
   font-family: "Sora", "helvetica neue", sans-serif;
 }
@@ -16,13 +16,13 @@
   font-size: 50px;
   font-weight: 500;
   margin-bottom: 10px;
-  color: #e7e3e3;
+  color:#0b1630;
   letter-spacing: -2px;
   transition: all 0.3s ease-in-out;
 }
 
 .services-title:hover {
-  color: #9c9ea1;
+  color: #0b1630;
 }
 
 .underline {
@@ -42,8 +42,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(133, 130, 130, 0.452);
+  border-left: 1px solid rgba(133, 130, 130, 0.452);
 }
 
 .service-card {
@@ -52,8 +52,8 @@
   align-items: flex-start;
   gap: 16px;
   padding: 36px 32px;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(133, 130, 130, 0.452);
+  border-bottom: 1px solid rgba(133, 130, 130, 0.452);
   position: relative;
   transition: background 0.35s ease;
   overflow: hidden;
@@ -120,7 +120,7 @@
   font-size: 17px;
   font-weight: 600;
   margin: 0 0 6px 0;
-  color: #e8e8e8;
+  color: #0b1630;
   line-height: 1.3;
   letter-spacing: -0.2px;
 }
